@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class TestRequestSumOnSegment {
 
-  private static ArrayList<Long> list = new ArrayList<>();
+  public static ArrayList<Long> list = new ArrayList<>();
   public static String addingOrder = "";
 
   public static final int MOD = 1_000_000_001;
