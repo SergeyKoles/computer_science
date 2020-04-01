@@ -164,17 +164,23 @@
 #
 #
 
-
-# def modify_list(l):
-#     for i in range(len(l)-1, -1, -1):
-#         cur = l[i]
-#         if (cur % 2) == 0:
-#             l[i] = cur // 2
-#         else:
-#             l.remove(cur)
+#################### МНОЖЕСТВА
+# s = set()  # создание пустого множества
+# basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+# print(basket)  # {'banana', 'apple', 'pear', 'orange'}
+# if 'orange' in basket:
+#     print('true')
 #
-# lst = [1, 2, 3, 4, 5, 6]
-# lst = [1, 2, 300, 4, 5, 1000]
+# s.add('')
+# s.remove('')  # кидает ошибку если элемента нет
+# s.discard()  # удалить элемент не кидает ошибку если элемента нет
+# s.clear()
+# len(s)
+
+################### СЛОВАРИ
+# d = {'a': 239, 10: 100}
+# print(d['a'])
+# print(d[10])
 # print(modify_list(lst))  # None
 # print(lst)               # [1, 2, 3]
 # modify_list(lst)
@@ -185,45 +191,45 @@
 # print(lst)               # [5, 4]
 
 
-# def update_dictionary(d, key, value):
-#     if key in d:
-#         d[key] += [value]
-#     elif (2 * key) in d:
-#         d[2 * key] += [value]
-#     else:
-#         d[2 * key] = [value]
-#
-# d = {}
-# print(update_dictionary(d, 1, -1))  # None
-# print(d)                            # {2: [-1]}
-# update_dictionary(d, 2, -2)
-# print(d)                            # {2: [-1, -2]}
-# update_dictionary(d, 1, -3)
-# print(d)                            # {2: [-1, -2, -3]}
+# d.get('key')
+# del d['key']
 
-# def word_counter():
-#     words = input().lower().split(' ')
-#     d = {}
-#     for word in words:
-#         w = word
-#         if w not in d:
-#             d[w] = 1
-#         else:
-#             d[w] += 1
-#     for k, v in d.items():
-#         print(k, v, ' ')
+# for key in d:
+#     print(key, end=' ')
 #
-# word_counter()
-
-
-# cache = {}
+# for key in d.keys():
+#     print(key, end=' ')
 #
-# n = int(input())
-# for i in range(n):
-#     x = int(input())
-#     if cache.get(x):
-#         print(cache[x])
-#     else:
-#         fx = f(x)
-#         cache[x] = fx
-#         print(cache[x])
+# for value in d.values():
+#     print(value, end=' ')
+#
+# for k, v in d.items():
+#     print(k, v, end='; ')
+
+################# ФАЙЛОВЫЙ ВВОД/ВЫВОД
+
+##### ЧТЕНИЕ
+
+# inf = open('file.txt', 'r')         #
+# s1 = inf.readline()
+# s2 = inf.readline()
+# inf.close()
+#
+# with open('text.txt') as inf:       # автозакрытие файлового потока
+#     s1 = inf.readline()
+#     s2 = inf.readline()
+#
+# s = inf.readline().strip()          # убирает все служебные символы из строки
+#
+# os.path.join('.', 'dirname', 'filename.txt')        # строит коректный путь до файла в зависимости от ОС
+
+##### ЗАПИСЬ
+
+# ouf = open('file.txt', 'w')
+# ouf.write('Some text\n')
+# ouf.write(str(25))
+# ouf.close()
+#
+# with open('text.txt', 'w') as ouf:
+#     ouf.write('Some text\n')
+#     ouf.write(str(25))
