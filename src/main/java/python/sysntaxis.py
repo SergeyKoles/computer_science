@@ -233,3 +233,16 @@
 # with open('text.txt', 'w') as ouf:
 #     ouf.write('Some text\n')
 #     ouf.write(str(25))
+########################### МОДУЛИ
+# my_module.py
+# import my_module
+# my_module.foo()
+#####--------
+# from my_modyle import foo
+# foo()
+#####--------
+# from my_module import *
+# foo()
+#####--------
+# from my_modyle import foo as my_foo
+# my_foo()
